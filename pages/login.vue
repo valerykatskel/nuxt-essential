@@ -1,6 +1,8 @@
 <template>
   <section>
     <h1>Login page</h1>
+    <b-alert v-if="$route.query.message" variant="danger" show>Need login first!</b-alert>
+
     <b-form @submit.prevent="onSubmit">
       <b-form-group
         id="input-group-1"
