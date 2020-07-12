@@ -6,7 +6,7 @@
 </template>
 
 <style scoped>
-.section {
+section {
   width: 600px;
   margin: 0 auto;
   padding-top: 5rem;

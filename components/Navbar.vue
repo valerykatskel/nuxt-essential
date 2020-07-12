@@ -10,6 +10,7 @@
           <nuxt-link exact no-prefetch active-class="active" class="nav-link" to="/">Home</nuxt-link>
           <nuxt-link no-prefetch active-class="active" class="nav-link" to="/about">About</nuxt-link>
           <nuxt-link no-prefetch active-class="active" class="nav-link" to="/users">Users</nuxt-link>
+          <nuxt-link no-prefetch active-class="active" class="nav-link" to="/login">Login</nuxt-link>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
