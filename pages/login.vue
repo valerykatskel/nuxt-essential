@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>Login page</h1>
-    <b-form>
+    <b-form @submit.prevent="onSubmit">
       <b-form-group
         id="input-group-1"
         label="Email address:"
@@ -19,7 +19,13 @@
 
 <script>
 export default {
-  layout: "empty"
+  layout: "empty",
+  methods: {
+    onSubmit() {
+      this.$store.dispatch("login");
+      this.$router.push("/");
+    }
+  }
 };
 </script>
 
