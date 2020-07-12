@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Users Page</h1>
+    <h1>{{ pageTitle }}</h1>
     <ul>
       <li v-for="user in users" :key="user.id">
         <a href="#" @click.prevent="openUser(user)">{{ user.name }}</a>
@@ -11,17 +11,20 @@
 
 <script>
 export default {
-  data: () => ({
-    users: []
-  }),
-  async mounted() {
-    this.users = await this.$axios.$get(
+  // for SSR
+  async asyncData({ $axios }) {
+    const users = await $axios.$get(
       "https://jsonplaceholder.typicode.com/users"
     );
+    return { users };
   },
+
+  data: () => ({
+    pageTitle: "Users page"
+  }),
   methods: {
     openUser(user) {
-      this.$router.push(`/users/${user}`);
+      this.$router.push(`/users/${user.id}`);
     }
   }
 };
