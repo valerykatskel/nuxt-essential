@@ -48,8 +48,8 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
-    "bootstrap-vue/nuxt"
+    "bootstrap-vue/nuxt", // docs: https://bootstrap-vue.js.org
+    "@nuxtjs/axios" // docs: https://axios.nuxtjs.org/
   ],
   /*
    ** Build configuration
